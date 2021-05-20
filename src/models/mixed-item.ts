@@ -4,6 +4,7 @@ export type MixedItem = {
   readonly _id: Realm.BSON.UUID
   name: string
   mixed: unknown
+  mixedList: Realm.List<unknown>
   items: Realm.List<MixedItem>
 }
 
