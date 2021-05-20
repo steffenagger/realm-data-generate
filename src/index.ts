@@ -74,6 +74,12 @@ const main = async () => {
         key3: 'test test test',
         key4: 'test test test test',
       },
+      items: [
+        {
+          _id: new UUID(),
+          name: 'Dictionary Item 1.5 (directly in create)',
+        },
+      ],
     })
 
     const item2 = realm.create<DictionaryItem>(DictionaryItemSchema.name, {
@@ -98,6 +104,7 @@ const main = async () => {
         uuid: new UUID(),
         item2,
       },
+      items: [item1, item2],
     })
 
     item1.items.push(item1, item2, item3)
